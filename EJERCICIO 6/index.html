@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calificaciones Estudiantes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calificaciones Estudiantes</h1>
+
+      <p id="contador"></p>
+
+      <form id="form">
+        <input type="number" placeholder="Ingrese el codigo del alumno" class="form__input" id="form__codigo" />
+        <input type="number" placeholder="Ingrese la calificación 1" class="form__input" id="form__cal1"/>
+        <input type="number" placeholder="Ingrese la calificación 2" class="form__input" id="form__cal2"/>
+        <input type="number" placeholder="Ingrese la calificación 3" class="form__input" id="form__cal3"/>    
+
+        <button id="form__button">Enviar</button>
+      </form>
+
+      <hr>
+
+      <p> </p>
+
+      <p id="result__aprobados"></p>
+
+      <p id="result__recuperaciones"></p>
+
+      <p id="result__maxima"></p>
+
+      <p> </p>
+
+      <hr>
+
+      <p> </p>
+
+      <div id="result"></div>
+      
+    </div>
+
+    <script src="codigo.js"></script>
+  </body>
+</html>
