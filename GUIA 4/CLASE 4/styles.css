@@ -1,0 +1,193 @@
+/*Se usa para elimar lo de los inputs de tipo number en html que aparecenc como unas flecas de arriba y abajo..*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF;
+    margin: 0;
+}
+
+/*Agregar Persona Sección*/
+
+.header {
+    margin: 0;
+    background-color:#4C48E5 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 25px 0;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 0;
+    color: #FFF;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    text-align: start;
+    padding-left: 2rem;
+}
+
+.section {
+    width: 95%;
+    height: auto;
+    background-color: #ffffff;
+    margin: auto;
+    border: 1px solid rgba(71, 211, 66, 0.6);
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(95, 221, 83, 0.6);
+    margin-bottom: 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.form__input {
+    width: 90%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #48E;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #48E;
+}
+
+.form__input__container:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 12rem;
+}
+
+#button__agregar {
+    width: 90%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #48E;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #48E;
+    background-color: #FFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#button__agregar:hover {
+    background-color: rgba(198, 199, 199, 0.6);
+}
+
+
+/*Mostrar Resultados*/
+
+.content {
+    width: 95%;
+    height: auto;
+    background-color: #ffffff;
+    margin: auto;
+    border: 1px solid rgba(71, 211, 66, 0.6);
+    border-radius: 25px;
+    padding: 50px 30px;
+    box-shadow: 0 0 20px rgba(95, 221, 83, 0.6);
+    margin-bottom: 20px;
+}
+
+/*Tabla de resultados*/
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #48E;
+    padding: 8px 5px;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    padding: 8px 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+}
+
+
+/*Boton Comer*/
+.btn-comer {
+    background-color: #4CAF50;      
+    padding: 6px 12px;
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-comer:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/*Botones de los metodos solicitados*/
+.btn-comer, .btn-caminar, .btn-hablar, .btn-dormir, .btn-estudiar {
+    font-size: 1.2rem;       
+    padding: 8px 12px;      
+    margin: 2px;              
+    border: none;           
+    border-radius: 8px;      
+    cursor: pointer;         
+    transition: all 0.2s;    
+    background-color: #f0f0f0;  
+}
+
+/*Con sus hover*/
+.btn-comer:hover { background-color: #ffcc80; }     
+.btn-caminar:hover { background-color: #80cbc4; } 
+.btn-hablar:hover { background-color: #ff8a80; }    
+.btn-dormir:hover { background-color: #b39ddb; }
+.btn-estudiar:hover { background-color: #fff176; }
+
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background-color: #e74c3c;     
+    color: #FFF;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 6px;
+    transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
