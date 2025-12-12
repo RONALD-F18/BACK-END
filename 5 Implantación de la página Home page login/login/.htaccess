@@ -1,0 +1,40 @@
+# Talent Sphere - Configuración Apache
+# =====================================
+
+# Activar motor de reescritura
+RewriteEngine On
+
+# Directorio base
+RewriteBase /login/
+
+# Si el archivo o directorio existe, no reescribir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo a index.php
+RewriteRule ^(.*)$ index.php?ruta=$1 [QSA,L]
+
+# Proteger archivos sensibles
+<FilesMatch "\.(php|sql|md)$">
+    # Permitir solo index.php
+</FilesMatch>
+
+# Bloquear acceso a directorios de configuración
+<IfModule mod_rewrite.c>
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^modelo/ - [F,L]
+    RewriteRule ^controlador/ - [F,L]
+</IfModule>
+
+# Configuración de seguridad
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Charset UTF-8
+AddDefaultCharset UTF-8
